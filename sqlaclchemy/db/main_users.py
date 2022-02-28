@@ -1,6 +1,9 @@
 from flask import Flask
 from data import db_session
 from data.users import User
+import sqlite3
+
+sqlite3.connect('./db/blogs.db')
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'yandexlyceum_secret_key'
